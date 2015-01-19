@@ -53,20 +53,85 @@ body
 	font-size: 12px 
 	line-height: 1.4
 
+//fonts
++font("FranklinGothicMediumC", FranklinGothicMediumC)
++font("FranklinGothicMediumC-Italic", FranklinGothicMediumC-Italic)
++font("FranklinGothicBookC", FranklinGothicBookC)
 
-// common blocks      
+=med
+	font-family: "FranklinGothicMediumC", Arial 
+=italic
+	font-family: "FranklinGothicMediumC-Italic", Arial 
+=book
+	font-family: "FranklinGothicBookC", Arial 
 
 
 
+// common blocks   
+h1, h2, h3, h4, h5, h6, strong, b
+	font-weight: normal   
 
+a
+	text-decoration: none
+	color: #000 
 
+.heading-36
+	font-size: 1.5em
+	line-height: 1
+	+med
+	color: #3e3d3d
+	display: block 
 
+//mod
+.input
+	padding: 10px 18px 10px
+	border: 2px solid #000 
+	+med
+	color: #262626
+	font-size: 18px 
+	+placeholder-color(#262626)
+	+box
 
+.btn
+	+med
+	color: #fff
+	background: #000
+	font-size: 24px
+	line-height: 1
+	padding: 10px 34px 9px
+	position: relative
+	&:active
+		top: 1px
 
-
-
-
-
+.btn-up
+	+med
+	font-size: 18px
+	letter-spacing: 0.001em 
+	position: relative
+	display: inline-block
+	padding-right: 35px
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -7px
+		+s(arrow-top)
+		
+.btn-link
+	font-size: 36px
+	color: #262626
+	+med
+	border: 3px solid #000
+	padding: 10px 32px 13px
+	display: inline-block 
+	position: relative
+	+box
+	&:active
+		top: 1px
+	&_mod
+		line-height: 1
+		padding: 17px 32px 19px
 
 
 

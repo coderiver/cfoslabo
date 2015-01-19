@@ -1,38 +1,732 @@
-// Normally mainpage styles
+.out
+	min-width: 1080px 
+.inner
+	width: 960px
+	margin: 0 auto  
+.main
+	background: #f5f2f0 
+	.inner
+		background: #ffffff 
+		padding: 0 60px 0
+		font-size: 17px
+.top
+	+clr
+	padding: 20px 0 0 0 
+	&_mod
+		padding: 20px 0 35px
+		border-bottom: 1px solid #e6e6e6  
+.logo
+	width: 270px
+	float: left
+	+clr
+	+vertical
+	text-align: left
+	margin: 13px 0 0 -8px
+	.logo__img
+		width: 100px
+		height: 100px
+		background: url(../img/biglogo.svg) no-repeat
+		+cover 
+	span, i
+		display: inline-block
+		vertical-align: middle
+	span
+		+book
+		font-size: 24px
+		line-height: 30px
+		width: 150px
+		padding: 5px 0 0 15px 
+.search
+	width: 655px
+	float: right
+	ul
+		+vertical
+		text-align: right
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-left: 35px
+		a
+			+vertical
+			display: block
+			&:hover
+				span
+					text-decoration: underline
+			i, span
+				display: inline-block
+				vertical-align: middle
+			.is-help
+				+s(help)
+			.is-version
+				+s(version)
+			i
+				margin-right: 10px
+			span
+				font-size: 18px
+				letter-spacing: 0.001em 
+				+med
+	&__block
+		padding: 28px 0 0 0
+		text-align: right
+		font-size: 0 
+	.input
+		width: 511px
+	.btn
+		margin-left: 5px
+	.input, .btn
+		display: inline-block
+		vertical-align: top
 
+.nav
+	font-size: 0.1px
+	text-align: justify
+	padding: 52px 0 0 0 
+	clear: both
+	margin: 0 -15px
+	&:after
+		width: 100%
+		display: inline-block
+		content: "" 
+	li
+		display: inline-block
+		vertical-align: top
+		text-align: left
+		a
+			font-size: 24px
+			line-height: 30px
+			letter-spacing: -0.001em 
+			color: #262626
+			+book
+			padding: 8px 15px 
+			display: block
+			&:hover
+				text-decoration: underline
+			&.is-active
+				+box-shadow(0 0 0 3px rgba(0, 0, 0, 1))
+				&:hover
+					text-decoration: none
+	&_mod
+		text-align: left
+		margin: 0 -25px 
+		li
+			padding: 0 10px 
+//CONTENT
+.content
+	padding: 25px 0 0 0 
+	font-size: 24px
+	border-bottom: 3px solid #000000 
+	p, li, h3, h2, h4
+		color: #262626
+		a
+			color: #262626
+	h4
+		+book
+		font-size: 1em
+		line-height: 1.25
+	h3
+		font-size: 1.5em
+		+med
+		line-height: 1
+		&.title
+			margin-bottom: 5px
+	h2
+		font-size: 2em
+		line-height: 1
+		+med
+		a
+			&:hover
+				text-decoration: underline
+	h5
+		font-size: 0.75em 
+		line-height: 1.66
+		+med
+	p
+		font-size: 1em
+		line-height: 1.25
+		+med
+		a
+			display: inline-block
+	time
+		font-size: 0.583em
+		color: #333333  
+		+book
+		line-height: 1.25
+		display: block
+	.tv-live
+		a
+			color: #3e3d3d 
+.link
+	display: inline-block
+	padding-left: 35px
+	position: relative 
+	span
+		border-bottom: 1px solid #262626 
+	&:before
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: -7px
+		+s(lsd)
+		content: ""
+	&:hover
+		span
+			border-bottom: none	
 
+.links
+	font-size: 0
+	padding: 50px 0 47px 
+	&_mod
+		padding-bottom: 25px 
+	.btn-link
+		margin-right: 9px
+.section
+	padding: 22px 0 18px
+	+clr
+.box, .box_mod
+	padding: 30px 0 28px 0  
+	time
+		margin-bottom: 5px
+	p
+		margin-bottom: 10px
+	h5
+		+med
+		color: #262626 
+.box_mod
+	border-bottom: 1px solid #e6e6e6
+	&:last-child
+		border: none
+		
+.bottom
+	border-bottom: 1px solid #e6e6e6
+	padding: 13px 0 16px  
+	margin-bottom: 15px
 
+.footer
+	padding: 35px 0 80px
+	+clr
+	&__link
+		+med
+		font-size: 18px
+		letter-spacing: 0.001em 
+		&:hover
+			text-decoration: underline
+	.is-left
+		float: left
+	.is-right
+		float: right
 
+//document
+.document
+	padding: 60px 0 15px 0 
+	&_mod
+		padding: 0 0 100px 
+	h2
+		margin-bottom: 60px
+		line-height: 1.16
+//decree
+.decree, .project
+	border-bottom: 1px solid #e6e6e6 
+	time
+		font-size: 1em
+		color: #333333
+	h2
+		margin-bottom: 60px
+	&_mod
+		h2
+			line-height: 1
+			margin-bottom: 40px
+.project
+	border-bottom: none
+	p
+		line-height: 1.5
+		margin-bottom: 35px
+		color: #3e3d3d 
+		a
+			text-decoration: underline
+			color: #3e3d3d 
+			&:hover
+				text-decoration: none
+	&__btns
+		padding: 15px 0 60px 
+		.btn-link_mod
+			padding: 21px 41px 23px
+.project-btn
+	padding: 10px 0 60px 
+	.btn-link
+		width: 100%
+		text-align: center
+//info
+.info
+	padding: 30px 0 50px 0 
+	p
+		line-height: 1.5
+		margin-bottom: 30px
+		color: #3e3d3d 
+	.list
+		padding: 35px 65px 30px 
+	&_mod
+		overflow: hidden
+.list
+	font-size: 1em
+	line-height: 1.5
+	color: #3e3d3d 
+	+italic
 
+//region
+.region
+	padding: 10px 0 40px 
+	h2
+		line-height: 1.5
 
+//cols
+.cols
+	border-bottom: 1px solid #e6e6e6 
+	padding: 0 0 20px 0
+	margin-bottom: 30px
+	+clr
+	&__left
+		float: left
+		width: 370px
+	&__right
+		float: right
+		width: 590px
+	&__box
+		margin-bottom: 40px
+	p, ul
+		color: #3e3d3d
+	ul
+		font-size: 1em
+		line-height: 1.25 
+		+med
+	&__text, ul
+		margin-bottom: 30px
+	li
+		span
+			margin-left: 20px
+	h2
+		margin-bottom: 40px
+.p-book
+	+book
+	font-size: 1em
+	line-height: 1.44
+	color: #333333
+	display: block 
+	
+.block
+	border-top: 1px solid #e6e6e6
+	padding: 60px 0 0 
+	&_mod
+		padding: 60px 0 50px 205px  
+	.btn-link
+		max-width: 620px
+		margin-bottom: 15px 
+	&__info
+		padding: 40px 0
+	&__box
+		padding-bottom: 30px
+		p
+			margin-bottom: 10px
+			color: #3e3d3d 
+			a
+				text-decoration: underline
+				color: #3e3d3d 
+				&:hover
+					text-decoration: none
+		h5
+			color: #3e3d3d 
+			max-width: 750px
+		
+		h3
+			color: #3e3d3d 
+		h2
+			color: #3e3d3d 
+			span
+				font-size: 0.5em
+	&__box_mod
+		h3
+			color: #262626 			
+		p
+			margin-bottom: 0
+.date
+	font-size: 0
+	padding: 20px 0 40px 
+	&_mod
+		padding-bottom: 15px
+	li
+		display: inline-block
+		vertical-align: top
+		margin-right: 8px 
+	a
+		font-size: 24px
+		line-height: 30px
+		display: block
+		padding: 11px 24px
+		+book
+		&:hover
+			text-decoration: underline 
+		&.is-active
+			background: #000
+			color: #fff  
+			&:hover
+				text-decoration: none
 
+.presses
+	padding: 35px 0 0 0 
+.press
+	padding: 10px 0 45px 
+	time
+		font-size: 1em
+	h2
+		line-height: 1
+		margin-bottom: 15px
+	p
+		color: #3e3d3d
+		a
+			color: #3E3D3D 
+			text-decoration: underline
+			&:hover
+				text-decoration: none
 
+.btns
+	margin: 0 -24px
+	font-size: 0
+	padding: 0 0 75px
+	clear: both  
+	.btn-link
+		padding: 15px 47px 
+		margin: 0 24px 
+.side
+	width: 220px
+	float: right
+	padding: 30px 0 0 0
+	text-align: right
+	&__link
+		width: 135px
+		display: inline-block
+		text-align: left
+		+book
+		line-height: 1.25
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+			
+.section_resp
+	.title
+		max-width: 730px
+		margin-bottom: 50px
+	.project
+		h2
+			line-height: 1
 
+.biography
+	padding: 0 0 30px 
+	&__top
+		padding-bottom: 60px
+		h4
+			line-height: 2
+			color: #333333
+		h3
+			margin-bottom: 20px
+		h5
+			line-height: 1.33
+			color: #3e3d3d 
+			width: 95%
+	&__top_mod
+		h5
+			width: 100%
+	&__item
+		padding-bottom: 30px
+		clear: both
+		time
+			font-size: 0.75em
+			line-height: 1.66
+			+med
+			color: #3e3d3d 
+		p
+			overflow: hidden
+			font-size: 1em
+			line-height: 1.25
+			color: #3e3d3d 
+	&__date
+		float: left
+		width: 205px
+.section_map
+	padding-bottom: 40px
+.row
+	+clr	
+	clear: both
+	padding-bottom: 35px 	
+.column
+	padding: 40px 0 0 0
+	width: 320px
+	float: left
+	ul, p, h4
+		color: #3e3d3d 
+	p, li
+		a
+			color: #3E3D3D 
+	h4
+		margin-bottom: 40px
+	li, p
+		+med
+		font-size: 1em
+		line-height: 1.5
+	ul, p
+		margin-bottom: 10px 
+		width: 90%
+	a
+		color: #3e3d3d
+		&:hover
+			text-decoration: underline 
+.inspectors
+	&__top
+		padding: 15px 0 50px 0 
+	h5
+		line-height: 1.33
+		color: #3e3d3d 
+.inspector
+	clear: both
+	+clr
+	padding-bottom: 25px
+	p
+		float: left
+		width: 340px
+		line-height: 1.75
+		padding: 10px 0 0 
+		color: #3e3d3d 
+	a
+		font-size: 1.5em
+		line-height: 1.16
+		+med
+		color: #3e3d3d 
+		display: inline-block
+		&:hover
+			span
+				+box-shadow(-30px 0 0  #000, 30px 0 0 #000, inset 0 0 0 50px #000, -30px 2px 0  #000, 30px 2px 0  #000, -30px 7px 0  #000, 30px -7px 0  #000, -30px -7px 0  #000, 30px 7px 0  #000)
+				color: #fff 
+				background: transparent
+	div
+		overflow: hidden
+		display: block
+		padding: 10px 30px
 
+.heading
+	padding: 0 0 38px 
+	h2
+		line-height: 1
+.tv-live
+	// width: 520px
+	a
+		display: inline-block
+		padding: 0 0 0 70px
+		+box
+		position: relative
+		color: #3e3d3d 
+		&:before
+			content: "" 
+			position: absolute
+			top: 9px
+			left: 0
+			+s(tv-live)
+			+opacity(0.9)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//body + class
+body
+	&.is-small
+		.content
+			font-size: 20px
+	&.is-medium
+		.content
+			font-size: 24px
+	&.is-large
+		.content
+			font-size: 28px
+	&.is-black
+		a
+			color: #fff 
+		.input
+			color: #fff
+			border-color: #fff
+			background: #000
+			+placeholder-color(#fff) 
+		.btn
+			color: #000
+			background: #fff
+		.header
+			background: #000 
+			position: relative
+			&:after
+				content: "" 
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				border-bottom: 1px solid #fff
+			&__link
+				.is-photo
+					+s(photo-white)
+			&__box
+				border-color: #fff 
+			.inner
+				border-color: #fff 
+		.size
+			a
+				&:before
+					+arr(16, 8, #fff, t)
+				&.fontsize-small
+					+s(is-small-white)
+				&.fontsize-medium
+					+s(is-medium-white)
+				&.fontsize-large
+					+s(is-large-white)
+		.color
+			a
+				&:before
+					+arr(16, 8, #fff, t)
+				&.color-normal
+					border-color: #c8c9c9
+					color: #000 
+				&.color-black
+					border-color: #fff
+				&.color-blue
+					color: #000  
+		.search
+			ul
+				a
+					.is-help
+						+s(help-white)
+					.is-version
+						+s(version-white)
+		.main
+			background: #000 
+			.inner
+				background: #000 
+		.content
+			border-color: #fff 
+			p, h2, h3, h4, a, time, .p-book, ul, li, h5
+				color: #FFF 
+		.btn-up
+			&:before
+				+s(arrow-top-white)
+		.box_mod, .bottom, .content, .top_mod, .header__box, .btn-link, .cols, .decree, .block
+			border-color: #fff
+		.link
+			&:before
+				+s(lsd-white)
+			span
+				border-color: #fff 
+		.inspector
+			a
+				&:hover
+					span
+						+box-shadow(-30px 0 0  #fff, 30px 0 0 #fff, inset 0 0 0 50px #fff, -30px 2px 0  #fff, 30px 2px 0  #fff, -30px 7px 0  #fff, 30px -7px 0  #fff, -30px -7px 0  #fff, 30px 7px 0  #fff)
+						color: #000
+		.nav
+			li
+				a
+					&.is-active
+						+box-shadow(0 0 0 3px #fff)
+		.tv-live
+			a
+				&:before
+					+s(tv-live-white)
+		.date
+			a
+				&.is-active
+					color: #000
+					background: #fff  
+		.logo
+			&__img
+				background-image: url(../img/biglogo-white.svg) 
+	&.is-blue
+		.logo
+			&__img
+				background-image: url(../img/biglogo-blue.svg) 
+		.size
+			a
+				&:before
+					+arr(16, 8, #063462, t)
+				&.fontsize-small
+					+s(is-small-blue)
+				&.fontsize-medium
+					+s(is-medium-blue)
+				&.fontsize-large
+					+s(is-large-blue)
+		.color
+			a
+				&:before
+					+arr(16, 8, #063462, t)
+				&.color-blue
+					color: #000  
+		.main
+			background: #9dd1ff
+			.inner
+				background: #9dd1ff
+		.header
+			background: #9dd1ff 
+			position: relative
+			&:after
+				content: "" 
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				border-bottom: 1px solid #063462
+			&__link
+				.is-photo
+					+s(photo-blue)
+			.inner
+				border-color: #063462
+		a
+			color: #063462 
+		.content
+			a, p, h2, h3, h4, h5, ul, li, time, .p-book
+				color: #063462 
+		.box_mod, .bottom, .content, .top_mod, .header__box, .btn-link, .cols, .decree, .block
+			border-color: #063462 
+		.input
+			color: #063462
+			border-color: #063462
+			background: #9dd1ff
+			+placeholder-color(#063462) 
+		.btn
+			color: #9dd1ff
+			background: #063462
+		.search
+			ul
+				a
+					.is-help
+						+s(help-blue)
+					.is-version
+						+s(version-blue)
+		.btn-up
+			&:before
+				+s(arrow-top-blue)
+		.nav
+			li
+				a
+					&.is-active
+						+box-shadow(0 0 0 3px #063462)
+		.link
+			&:before
+				+s(lsd-blue)
+			span
+				border-color: #063462 
+		.inspector
+			a
+				&:hover
+					span
+						+box-shadow(-30px 0 0  #063462, 30px 0 0 #063462, inset 0 0 0 50px #063462, -30px 2px 0  #063462, 30px 2px 0  #063462, -30px 7px 0  #063462, 30px -7px 0  #063462, -30px -7px 0  #063462, 30px 7px 0  #063462)
+						color: #9dd1ff
+		.tv-live
+			a
+				&:before
+					+s(tv-live-blue)
+		.date
+			a
+				&.is-active
+					color: #9dd1ff
+					background: #063462  
 
 
 
